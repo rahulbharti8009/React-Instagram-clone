@@ -1,10 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from '../logo.svg';
+import '../App.css';
 // import LoginForm from './App/LoginForm';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
-const App = () => {
+const LoginUI = () => {
 let [menu, setMenu] = useState(['about','job','meta','api','privacy','location','instagramlite','thread','meta' ,'verify'])
   
 return (
@@ -19,7 +20,7 @@ return (
           <label className='insta'>Instagram</label>
          <input className="login-item" name='text' placeholder='phonenumber, username or email address' />
          <input className='login-item' name='password' placeholder='Password' />
-         <button className="btn-login login-item" type="button">Login</button>
+         <button onClick={useNavigate('/DashboardUI')} className="btn-login login-item" type="button">Login</button>
         
        <div className='line-box'>
           <p>OR</p>
@@ -53,4 +54,4 @@ return (
   );
 };
 
-export default App;
+export default LoginUI;

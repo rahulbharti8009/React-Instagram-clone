@@ -1,7 +1,7 @@
 
 
 
-const Dashboard=()=>{
+const DashboardUI=()=>{
     return(
         <div>
             <header>
@@ -9,6 +9,7 @@ const Dashboard=()=>{
             </header>
 
             <main>
+             <h1>Dashboard</h1>;
 
             </main>
 
@@ -20,3 +21,5 @@ const Dashboard=()=>{
 
     );
 }
+
+export default DashboardUI;
