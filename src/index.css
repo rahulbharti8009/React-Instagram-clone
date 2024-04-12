@@ -31,7 +31,7 @@ menu{
 menu li{
   font-size: 14px;
   padding:  10px;
-  /* color: rgba(112, 112, 114, 0.571); */
+  color: rgba(112, 112, 114, 0.571);
   display: table-cell;
 }
 
