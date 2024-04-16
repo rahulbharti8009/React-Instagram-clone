@@ -60,6 +60,8 @@ header{
   border: 2px solid rgb(229, 221, 221);
   width: 400px;
   border-width: 0 ;
+  mix-blend-mode: multiply; /* remove background from image */
+  background-size: cover;
 }
 
 .containner-left img{
@@ -189,3 +191,5 @@ input{
   margin: 5px;
   height: 40px;
 }
+
+/* ========================================================== */

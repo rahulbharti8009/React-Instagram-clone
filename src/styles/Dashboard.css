@@ -1,0 +1,26 @@
+
+.sidemenu{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 500px;
+    height: 100vh;
+    background-color: aqua;
+}
+
+.box1{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(135, 104, 163);
+}
+
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(59, 64, 187);
+}
+.box3{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(205, 35, 35);
+}

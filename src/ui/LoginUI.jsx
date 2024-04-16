@@ -14,12 +14,14 @@ import FooterComp from '../components/FooterComp';
 const LoginUI = () => {
   let navigate = useNavigate();
 
-  
-console.log("Login", "update")
-
+log("Login", "update")
 
 let hitLoginApi=()=>{
   console.log("Login", "hitLoginApi")
+
+  // To store data
+  localStorage.setItem('isLogin', true);
+
     onPostGenericApi("TAG", "theme", "pts_mobile_app/index.php/getTheme",  "{\"product\":\"PTS\"}" ,
       (response)=>{
         log("TAG", ` response theme`, JSON.stringify(response))
@@ -53,10 +55,6 @@ return (
               hitLoginApi();
            }} className="btn-login login-item" type="button">Login</button>
           
-         {/* <div className='line-box'>
-            <p>OR</p>
-         </div> */}
-  
          <label className='log-in-with-facebook'>Log in with facebook</label>
          <label className='log-in-with-facebook' style={{fontSize: '14px'}}>forgot your password</label>
   
