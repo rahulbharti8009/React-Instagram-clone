@@ -1,7 +1,7 @@
 import logo from '../logo.svg';
 import '../App.css';
 // import LoginForm from './App/LoginForm';
-import { useState } from 'react';
+import { useReducer, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import phone from '../images/phone.png'
@@ -10,25 +10,32 @@ import { onPostGenericApi } from '../api/Repository';
 import { log } from '../common/Log';
 import { UI } from '../utils/Constant';
 import FooterComp from '../components/FooterComp';
+import { initial_state, postReducer } from '../action/PostReducer';
 
 const LoginUI = () => {
+let [state, dispatch] = useReducer(postReducer, initial_state)
+
   let navigate = useNavigate();
 
 log("Login", "update")
 
 let hitLoginApi=()=>{
-  console.log("Login", "hitLoginApi")
-
   // To store data
   localStorage.setItem('isLogin', true);
+
+    dispatch({type: "fetch_login"})
 
     onPostGenericApi("TAG", "theme", "pts_mobile_app/index.php/getTheme",  "{\"product\":\"PTS\"}" ,
       (response)=>{
         log("TAG", ` response theme`, JSON.stringify(response))
+        // dispatch({type: "response_login"})
+
         alert(JSON.stringify(response))
         navigate(UI.DashboardUI, { state: { id: 7, color: 'green' } })
       }, (failure)=> {
         log("TAG", ` failure theme`,  JSON.stringify(failure))
+        // dispatch({type: "error_login"})
+
         alert(JSON.stringify(failure))
       }
     )

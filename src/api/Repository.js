@@ -35,7 +35,7 @@ fetch(url, requestOptions)
             log(TAG, type+' response ', JSON.stringify(response))
             if(response.status == 404) {
             } else if(response.status == 500) {
-            } else {
+            } else {    
               return response.json();
             }
         })
