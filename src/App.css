@@ -41,6 +41,7 @@
 header{
   width: 100%;
   height: 100px;
+  background-color: rgb(255, 255, 255);
 }
 
 .container{
@@ -48,6 +49,43 @@ header{
   justify-content: center;
   background-color: rgb(255, 255, 255);
   width:100%;
+  margin-left: 20px;
+}
+
+.containner-left{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid rgb(229, 221, 221);
+  width: 400px;
+  border-width: 0 ;
+  mix-blend-mode: multiply; /* remove background from image */
+  background-size: cover;
+}
+
+.containner-left img{
+  width: 100%;
+  margin: 5px;
+  height: 540px;
+}
+
+@media only screen and (max-width: 900px) {
+  .containner-left{
+    display: none;
+  }
+
+  header{
+    width: 0px ;
+    height: 0px;
+  }
+}
+
+@media (max-width: 450px) {
+  .first {
+    background-color:  rgb(21, 5, 5);
+    border-width: 0px;
+  }
 }
 
 .login {
@@ -57,17 +95,18 @@ header{
   padding: 10px;
   border: 2px solid rgb(229, 221, 221);
   width: 300px;
-  border-width: 0 !important;
+  border-width: 0 ;
+  padding: 20px;
 }
 
 .first {
   flex-direction: column;
   display: flex;
   margin-top: 10px;
-  border: 2px solid rgb(229, 221, 221);
   align-items: center;
   width: 100%;
   padding: 20px;
+  border: 2px solid rgb(229, 221, 221);
   border-width: 1px;
 }
 .second{
@@ -83,6 +122,14 @@ header{
 .third{
   border-width: 0 !important;
   padding: 10px;
+  flex-direction: column ;
+  display: flex;
+  justify-content: center;
+}
+
+.third-containner {
+  align-self: center;
+  display: flex;
 
 }
 
@@ -134,13 +181,15 @@ input{
 }
 
 .icon-apple{
-  width: 45%;
+  width: 90%;
   margin: 5px;
   height: 40px;
 }
 
 .icon-android{
-  width: 45%;
+  width: 90%;
   margin: 5px;
   height: 40px;
 }
+
+/* ========================================================== */

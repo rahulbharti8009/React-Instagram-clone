@@ -4,11 +4,14 @@ import './index.css';
 import App from './ui/LoginUI';
 import reportWebVitals from './reportWebVitals';
 import AppStack from './AppStack';
+import NoteState from './context/NoteState';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppStack />
+    <NoteState>
+      <AppStack />
+    </NoteState>
   </React.StrictMode>
 );
 
